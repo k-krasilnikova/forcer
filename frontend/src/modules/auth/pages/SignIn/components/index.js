@@ -1,12 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Field, reduxForm } from "redux-form";
+import {
+  // Field,
+  reduxForm,
+} from "redux-form";
 import { compose } from "redux";
 import { withStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+// import TextField from "@material-ui/core/TextField";
+// import Button from "@material-ui/core/Button";
 
 import Layout from "common/Layout";
+import Logo from "static/Logo-white.png";
 import styles from "./styles";
 
 const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
@@ -16,9 +20,9 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
           title={t("signIn.documentTitle", { company: CURRENT_HUB_LABEL })}
         /> */}
       <form className={classes.form} onSubmit={handleSubmit}>
-        {/* <CustomLink to="/">
-          <img src={LOGO.purple} alt="purple-logo" />
-        </CustomLink> */}
+        {/* <CustomLink to="/"> */}
+        <img src={Logo} alt="logo" className={classes.logo} />
+        {/* </CustomLink> */}
         <section className={classes.wrapper}>
           {/* {error && (
             <span className={classes.formError}>
@@ -26,7 +30,7 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
               &nbsp;
             </span>
           )} */}
-          <Field
+          {/* <Field
             name="email"
             label="common:labels.email"
             placeholder="common:labels.email"
@@ -45,7 +49,7 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
             size="large"
             label="buttons.logIn"
             type="submit"
-          />
+          /> */}
         </section>
       </form>
     </Layout>
