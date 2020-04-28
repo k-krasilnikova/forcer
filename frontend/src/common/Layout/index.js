@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 
-import Notifications from "common/notifications";
-import Menu from "common/menu";
-import Header from "common/HeaderDesktop";
+// import Notifications from "common/notifications";
+// import Menu from "common/Menu";
+// import Header from "common/Header";
 import styles from "./styles";
 
 const Layout = ({
@@ -17,16 +17,14 @@ const Layout = ({
 }) => {
   return (
     <div className={classes.root}>
-      <Notifications className={classes.notifications} />
+      {/* <Notifications className={classes.notifications} /> */}
       <div className={classes.container}>
-        <div className={classes.drawer}>
-          <Menu />
-        </div>
+        <div className={classes.drawer}>{/* <Menu /> */}</div>
         <div className={classes.mainComponent}>
           <div className={classes.headerDesktop}>
-            <Header title={title} className={headerClassName} warning={warning}>
+            {/* <Header title={title} className={headerClassName} warning={warning}>
               {content}
-            </Header>
+            </Header> */}
           </div>
           <div className={classes.mainLayoutContent}>{children}</div>
         </div>
