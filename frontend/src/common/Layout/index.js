@@ -35,9 +35,8 @@ const Layout = ({
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
-  isAuthenticated: PropTypes.bool.isRequired,
-  cContent: PropTypes.object,
-  title: PropTypes.string.isRequired,
+  content: PropTypes.object,
+  title: PropTypes.string,
   warning: PropTypes.string,
   headerClassName: PropTypes.string,
 };

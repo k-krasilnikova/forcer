@@ -7,6 +7,10 @@ const styles = () => ({
   logo: {
     width: 140,
   },
+  wrapper: {
+    display: "flex",
+    flexDirection: "column",
+  },
 });
 
 export default styles;

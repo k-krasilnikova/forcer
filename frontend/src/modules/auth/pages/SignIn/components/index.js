@@ -1,55 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  // Field,
-  reduxForm,
-} from "redux-form";
+import { Field, reduxForm } from "redux-form";
 import { compose } from "redux";
 import { withStyles } from "@material-ui/core/styles";
-// import TextField from "@material-ui/core/TextField";
-// import Button from "@material-ui/core/Button";
+import Button from "@material-ui/core/Button";
 
 import Layout from "common/Layout";
-import Logo from "static/Logo-white.png";
+import TextInput from "common/TextInput";
+import Logo from "static/Logo-black-web.png";
 import styles from "./styles";
 
 const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
   return (
     <Layout>
-      {/* <DocumentTitle
-          title={t("signIn.documentTitle", { company: CURRENT_HUB_LABEL })}
-        /> */}
       <form className={classes.form} onSubmit={handleSubmit}>
         {/* <CustomLink to="/"> */}
         <img src={Logo} alt="logo" className={classes.logo} />
         {/* </CustomLink> */}
         <section className={classes.wrapper}>
-          {/* {error && (
-            <span className={classes.formError}>
-              <ErrorOutline className={classes.errorIcon} />
-              &nbsp;
-            </span>
-          )} */}
-          {/* <Field
+          <Field
             name="email"
-            label="common:labels.email"
-            placeholder="common:labels.email"
+            label="Email"
+            placeholder="Email"
             type="text"
-            component={TextField}
+            component={TextInput}
           />
           <Field
             name="password"
-            label="common:labels.password"
-            placeholder="common:labels.password"
-            component={TextField}
+            label="Password"
+            placeholder="Password"
+            component={TextInput}
           />
-          <Button
-            fullWidth
-            color="primary"
-            size="large"
-            label="buttons.logIn"
-            type="submit"
-          /> */}
+          <Button fullWidth color="primary" size="large" type="submit">
+            Sign In
+          </Button>
         </section>
       </form>
     </Layout>
@@ -57,13 +41,9 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
 };
 
 SignInForm.propTypes = {
-  isPending: PropTypes.bool.isRequired,
+  isPending: PropTypes.bool,
   handleSubmit: PropTypes.func.isRequired,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-};
-
-SignInForm.defaultProps = {
-  error: null,
 };
 
 export default compose(reduxForm(), withStyles(styles))(SignInForm);
