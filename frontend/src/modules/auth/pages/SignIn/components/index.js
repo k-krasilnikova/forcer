@@ -24,12 +24,14 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
             placeholder="Email"
             type="text"
             component={TextInput}
+            className={classes.field}
           />
           <Field
             name="password"
             label="Password"
             placeholder="Password"
             component={TextInput}
+            className={classes.field}
           />
           <Button fullWidth color="primary" size="large" type="submit">
             Sign In
