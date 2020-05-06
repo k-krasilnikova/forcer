@@ -9,6 +9,5 @@ export const ROUTES = {
   CLIENTS: "/clients",
   CLIENT_DETAILS: "/clients/:id",
   FEED: "/feed",
-  FEED_DETAILS: "/feed/:id",
   STATISTICS: "/statistics",
 };

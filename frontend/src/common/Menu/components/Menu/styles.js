@@ -20,7 +20,7 @@ const styles = () => ({
   },
   userContainer: {
     paddingLeft: 12,
-    marginTop: 20,
+    marginTop: 60,
   },
   menuContainer: {
     flex: 1,

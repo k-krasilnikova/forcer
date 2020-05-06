@@ -5,14 +5,14 @@ import { withStyles } from "@material-ui/core/styles";
 import Layout from "common/Layout";
 import styles from "./styles";
 
-const Clients = ({ classes }) => {
+const Feed = ({ classes }) => {
   return (
-    <Layout isAuthenticated title="Clients View">
+    <Layout isAuthenticated title="Feed">
       <div className={classes.wrapper}></div>
     </Layout>
   );
 };
 
-Clients.propTypes = {};
+Feed.propTypes = {};
 
-export default withStyles(styles)(Clients);
+export default withStyles(styles)(Feed);

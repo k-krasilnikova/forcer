@@ -15,10 +15,10 @@ const styles = () => ({
   contentWithMenu: {
     width: "calc(100vw - 240px)",
     marginLeft: 240,
+    marginRight: 20,
   },
   mainLayoutContent: {
     width: "100%",
-    // height: "100vh",
   },
 });
 

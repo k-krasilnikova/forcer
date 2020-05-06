@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import Menu from "../components/Menu";
 
-class MenuContainer extends Component {
+const MenuContainer = () => {
   // onLogoutClick = () => {
   //   const {
   //     authActions: { logout },
@@ -15,14 +15,12 @@ class MenuContainer extends Component {
   //   this.props.push(Routes.PROFILE_VERIFICATION);
   // };
 
-  render() {
-    const props = {
-      email: "lol@gmail.com",
-      userName: "Main Admin",
-    };
-    return <Menu {...props} />;
-  }
-}
+  const props = {
+    email: "lol@gmail.com",
+    userName: "Main Admin",
+  };
+  return <Menu {...props} />;
+};
 
 MenuContainer.propTypes = {
   email: PropTypes.string,

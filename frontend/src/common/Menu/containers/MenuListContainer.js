@@ -1,38 +1,31 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import React, { useCallback } from "react";
+import { useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import { bindActionCreators } from "redux";
 
 import MenuList from "../components/MenuList";
 import { menuItemsList } from "../constants";
-import * as actionCreators from "../actions";
+import { menuTabChanged } from "../actions";
 
-class MenuListContainer extends Component {
-  onMenuClick = () => {
-    const {
-      actions: { menuTabChanged },
-    } = this.props;
-    menuTabChanged();
-  };
+const MenuListContainer = () => {
+  const location = useLocation();
+  const dispatch = useDispatch();
 
-  render() {
-    const props = {
-      onMenuClick: this.onMenuClick,
-      selectedRoute: this.props.location.pathname,
-      menuItemsList,
-    };
-    return <MenuList {...props} />;
-  }
-}
+  const onMenuClick = useCallback(() => {
+    dispatch(menuTabChanged());
+  }, [dispatch]);
 
-MenuListContainer.propTypes = {
-  location: PropTypes.object.isRequired,
-  isAuthenticated: PropTypes.bool.isRequired,
+  return (
+    <MenuList
+      menuItemsList={menuItemsList}
+      onMenuClick={onMenuClick}
+      selectedRoute={location.pathname}
+    />
+  );
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actionCreators, dispatch),
-});
+MenuListContainer.propTypes = {
+  isAuthenticated: PropTypes.bool,
+};
 
-export default connect(null, mapDispatchToProps)(withRouter(MenuListContainer));
+export default MenuListContainer;
