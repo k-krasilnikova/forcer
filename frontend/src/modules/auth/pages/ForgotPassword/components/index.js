@@ -14,48 +14,50 @@ import styles from "./styles";
 const ForgotPassword = ({ classes, handleSubmit, error, isPending }) => {
   return (
     <Layout>
-      <form className={classes.form} onSubmit={handleSubmit}>
-        {/* <CustomLink to="/"> */}
-        <img src={Logo} alt="logo" className={classes.logo} />
-        {/* </CustomLink> */}
-        <section className={classes.wrapper}>
-          <Field
-            name="email"
-            label="Email"
-            placeholder="Email"
-            type="text"
-            component={TextInput}
-            className={classes.field}
-            validate={[required, email]}
-          />
-          <Field
-            name="newPassword"
-            label="New Password"
-            placeholder="Password"
-            component={TextInput}
-            className={classes.field}
-            validate={[required]}
-            isConfidential
-          />
-          <Field
-            name="confirmPassword"
-            label="Confirm Password"
-            placeholder="Password"
-            component={TextInput}
-            className={classes.field}
-            validate={[required]}
-            isConfidential
-          />
-          <Button
-            color="primary"
-            size="large"
-            type="submit"
-            isPending={isPending}
-          >
-            Reset Password
-          </Button>
-        </section>
-      </form>
+      <div className={classes.container}>
+        <form className={classes.form} onSubmit={handleSubmit}>
+          {/* <CustomLink to="/"> */}
+          <img src={Logo} alt="logo" className={classes.logo} />
+          {/* </CustomLink> */}
+          <section className={classes.wrapper}>
+            <Field
+              name="email"
+              label="Email"
+              placeholder="Email"
+              type="text"
+              component={TextInput}
+              className={classes.field}
+              validate={[required, email]}
+            />
+            <Field
+              name="newPassword"
+              label="New Password"
+              placeholder="Password"
+              component={TextInput}
+              className={classes.field}
+              validate={[required]}
+              isConfidential
+            />
+            <Field
+              name="confirmPassword"
+              label="Confirm Password"
+              placeholder="Password"
+              component={TextInput}
+              className={classes.field}
+              validate={[required]}
+              isConfidential
+            />
+            <Button
+              color="primary"
+              size="large"
+              type="submit"
+              isPending={isPending}
+            >
+              Reset Password
+            </Button>
+          </section>
+        </form>
+      </div>
     </Layout>
   );
 };

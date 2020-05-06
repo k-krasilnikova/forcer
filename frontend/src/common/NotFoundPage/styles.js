@@ -1,6 +1,8 @@
 const styles = () => ({
   section: {
-    width: "100%",
+    height: "inherit",
+    justifyContent: "center",
+    alignItems: "center",
     display: "flex",
     "@media (max-width:600px)": {
       flexDirection: "column-reverse",

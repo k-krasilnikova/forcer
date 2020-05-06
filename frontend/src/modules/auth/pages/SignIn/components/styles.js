@@ -1,6 +1,13 @@
 const styles = () => ({
+  container: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "inherit",
+  },
   form: {
     display: "flex",
+    maxWidth: 330,
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: "#ffffff33",

@@ -8,6 +8,7 @@ export const ROUTES = {
   MARKS: "/marks",
   CLIENTS: "/clients",
   CLIENT_DETAILS: "/clients/:id",
-  FEED: "/feed/:id",
+  FEED: "/feed",
+  FEED_DETAILS: "/feed/:id",
   STATISTICS: "/statistics",
 };

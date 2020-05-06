@@ -11,9 +11,9 @@ import Logo from "static/Logo-black-web.png";
 import { email, required } from "utils/validation";
 import styles from "./styles";
 
-const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
+const Clients = ({ classes, handleSubmit, error, isPending }) => {
   return (
-    <Layout>
+    <Layout isAuthenticated title="User Management">
       <form className={classes.form} onSubmit={handleSubmit}>
         {/* <CustomLink to="/"> */}
         <img src={Logo} alt="logo" className={classes.logo} />
@@ -43,7 +43,7 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
             type="submit"
             isPending={isPending}
           >
-            Sign In
+            Search
           </Button>
         </section>
       </form>
@@ -51,10 +51,10 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
   );
 };
 
-SignInForm.propTypes = {
+Clients.propTypes = {
   isPending: PropTypes.bool,
   handleSubmit: PropTypes.func.isRequired,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
-export default compose(reduxForm(), withStyles(styles))(SignInForm);
+export default compose(reduxForm(), withStyles(styles))(Clients);

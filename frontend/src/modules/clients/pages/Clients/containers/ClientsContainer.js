@@ -1,29 +1,31 @@
 import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import SignIn from "../components";
-import { signinRequest } from "../actions";
+import Clients from "../components";
+import { getClientsRequest } from "../actions";
 import { createPendingSelector } from "api/selectors";
-import { SIGNIN_FORM } from "../../../constants";
+import { CLIENTS_FORM } from "../../../constants";
 
-const SignInContainer = () => {
+const ClientsContainer = () => {
   const dispatch = useDispatch();
-  const isSigninPending = useSelector(createPendingSelector(signinRequest));
+  const isGetClientsPending = useSelector(
+    createPendingSelector(getClientsRequest)
+  );
 
   const handleSubmit = useCallback(
     (data) => {
-      dispatch(signinRequest(data));
+      dispatch(getClientsRequest(data));
     },
     [dispatch]
   );
 
   return (
-    <SignIn
-      form={SIGNIN_FORM}
-      isPending={isSigninPending}
+    <Clients
+      form={CLIENTS_FORM}
+      isPending={isGetClientsPending}
       onSubmit={handleSubmit}
     />
   );
 };
 
-export default SignInContainer;
+export default ClientsContainer;

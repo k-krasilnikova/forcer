@@ -8,7 +8,7 @@ import Auth from "modules/auth";
 import Clients from "modules/clients";
 // import Feed from "modules/feed";
 // import Statistics from "modules/statistics";
-import Home from "modules/home";
+// import Home from "modules/home";
 import NotFoundPage from "common/NotFoundPage";
 
 const AppRoutes = () => {
