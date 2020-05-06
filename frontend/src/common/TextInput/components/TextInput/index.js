@@ -28,6 +28,7 @@ const TextInput = ({
   endAdornment,
   inputClassName,
   isTooltipShown,
+  tooltip,
   checkCapsLock,
   wrapperClassName,
   borderColor,
@@ -41,7 +42,6 @@ const TextInput = ({
     classes.textFieldContainer,
     className
   );
-
   return (
     <Tooltip
       open={isTooltipShown}
@@ -50,7 +50,7 @@ const TextInput = ({
       disableTouchListener
       title={
         <div className={classes.tooltipText}>
-          <ErrorOutline className={classes.tooltipIcon} /> {error}
+          <ErrorOutline className={classes.tooltipIcon} /> {tooltip}
         </div>
       }
       placement="bottom-start"
@@ -113,7 +113,7 @@ const TextInput = ({
                     onClick={onChangeVisibility}
                     className={classes.iconButton}
                   >
-                    {isShowPassword ? <Visibility /> : <VisibilityOff />}
+                    {isShowPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
                 </InputAdornment>
               )),
