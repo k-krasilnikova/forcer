@@ -8,7 +8,8 @@ const styles = () => ({
   title: {
     fontFamily: "Helvetica Neue, sans-serif",
     fontSize: "28px",
-    fontWeight: 300,
+    fontWeight: 400,
+    color: "#ffefd4",
   },
   mainInfo: {
     display: "flex",
