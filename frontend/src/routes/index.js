@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router";
 
 import { ROUTES } from "../constants";
 import Auth from "modules/auth";
-// import Maps from "modules/maps";
+import Maps from "modules/maps";
 // import Marks from "modules/marks";
 import Clients from "modules/clients";
 import Feed from "modules/feed";
@@ -16,7 +16,7 @@ const AppRoutes = () => {
     <Suspense fallback={""}>
       <Switch>
         <Route path={ROUTES.AUTH} component={Auth} />
-        {/* <Route path={ROUTES.MAP} component={Maps} /> */}
+        <Route path={ROUTES.MAP} component={Maps} />
         {/* <Route path={ROUTES.MARKS} component={Marks} /> */}
         <Route path={ROUTES.CLIENTS} component={Clients} />
         <Route path={ROUTES.FEED} component={Feed} />
