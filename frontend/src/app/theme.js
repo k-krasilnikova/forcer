@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const palette = {
-  error: { main: "#AA5072" },
+  error: { main: "#eae7e2" },
 };
 
 const fontSize = {
@@ -9,40 +9,12 @@ const fontSize = {
 };
 
 const theme = createMuiTheme({
-  climCustomStyles: {
-    climCustomButton: {
-      borderRadius: 0,
-      boxShadow: "none",
-      background: "rgba(200, 101, 103, 1)",
-      "&:hover": {
-        background: "rgba(200, 101, 103, 0.7)",
-      },
-      "&:active": {
-        background: "rgba(200, 101, 103, 0.7)",
-      },
-    },
-    climCustomLink: {
-      margin: "0 0 4px 0",
-      color: "#C86567",
-      fontSize: 14,
-      fontWeight: 300,
-      "&:hover": {
-        color: "rgba(200, 101, 103, 0.7)",
-      },
-      "&:active": {
-        color: "rgba(200, 101, 103, 0.7)",
-      },
-    },
-    climCustomLogo: {
-      maxWidth: 183,
-    },
-  },
   typography: {
     useNextVariants: true,
   },
   palette: {
     primary: {
-      main: "#78d5d3",
+      main: "#ffefd4",
     },
     secondary: {
       main: "#2727C5",
@@ -58,8 +30,7 @@ const theme = createMuiTheme({
     fontFamily: "Lato, sans-serif",
   },
   tip: {
-    // position: 'absolute',
-    color: "#767C9E",
+    color: "#ffefd4",
     fontSize: fontSize.xs,
     display: "block",
   },
@@ -113,17 +84,17 @@ theme.overrides = {
   },
   MuiButton: {
     flatPrimary: {
-      color: "#969082",
+      color: "#ffefd4",
       textTransform: "none",
       fontWeight: 500,
       backgroundColor: "transparent",
       "&:hover": {
         backgroundColor: "transparent",
-        color: "#ffefd4",
+        color: "#969082",
       },
       "&:active": {
         backgroundColor: "transparent",
-        color: "#ffefd4",
+        color: "#969082",
       },
     },
     containedPrimary: {
@@ -209,14 +180,14 @@ theme.overrides = {
   },
   MuiInputAdornment: {
     root: {
-      color: "#888EB4",
+      color: "#ffefd4",
       fontSize: 16,
       fontWeight: 300,
     },
   },
   MuiCheckbox: {
     checked: {
-      color: "#2727C5",
+      color: "#ffefd4",
     },
     disabled: {
       color: "#ffffff",
@@ -224,7 +195,7 @@ theme.overrides = {
   },
   MuiRadio: {
     checked: {
-      color: "#2727C5",
+      color: "#ffefd4",
     },
     disabled: {
       color: "#ffffff",
