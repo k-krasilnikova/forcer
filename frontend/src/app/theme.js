@@ -84,17 +84,17 @@ theme.overrides = {
   },
   MuiButton: {
     flatPrimary: {
-      color: "#969082",
+      color: "#ffefd4",
       textTransform: "none",
       fontWeight: 500,
       backgroundColor: "transparent",
       "&:hover": {
         backgroundColor: "transparent",
-        color: "#ffefd4",
+        color: "#969082",
       },
       "&:active": {
         backgroundColor: "transparent",
-        color: "#ffefd4",
+        color: "#969082",
       },
     },
     containedPrimary: {
