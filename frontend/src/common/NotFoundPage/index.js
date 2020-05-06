@@ -1,20 +1,22 @@
 import React from "react";
 
 import { withStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 
+import Layout from "common/Layout";
+import notFound from "static/notFound.png";
 import styles from "./styles";
 
 const NotFoundPage = ({ classes }) => {
   return (
-    <section className={classes.section}>
-      <div className={classes.contentContainer}>
-        <Typography className={classes.title}> Oops </Typography>
-        <Typography className={classes.description}>
-          This page is not exist
-        </Typography>
-      </div>
-    </section>
+    <Layout>
+      <section className={classes.section}>
+        <img alt="" src={notFound} className={classes.image} />
+        <div className={classes.contentContainer}>
+          <h2 className={classes.title}>Oops</h2>
+          <h2 className={classes.description}>This page is not exist</h2>
+        </div>
+      </section>
+    </Layout>
   );
 };
 

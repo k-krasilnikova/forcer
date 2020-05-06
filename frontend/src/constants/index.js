@@ -7,7 +7,7 @@ export const ROUTES = {
   MAP_MARK: "/map/:id",
   MARKS: "/marks",
   CLIENTS: "/clients",
-  CLIENT: "/clients/:id",
+  CLIENT_DETAILS: "/clients/:id",
   FEED: "/feed/:id",
   STATISTICS: "/statistics",
 };

@@ -10,7 +10,7 @@ const styles = (theme) => ({
   },
   label: {
     color: "#ffefd4",
-    fontFamily: "Lato, sans-serif",
+    fontFamily: "Helvetica Neue, sans-serif",
     fontSize: "15px",
     lineHeight: "15px",
     "&$labelFocused:not($labelError)": {
@@ -38,7 +38,7 @@ const styles = (theme) => ({
     color: "#3f3e39",
     lineHeight: "20px",
     fontSize: "16px",
-    fontFamily: "Lato, sans-serif",
+    fontFamily: "Helvetica Neue, sans-serif",
   },
   purpleBorder: {
     "&$textFieldFocused:not($textFieldError) $notchedOutline": {

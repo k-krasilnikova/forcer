@@ -27,7 +27,7 @@ const theme = createMuiTheme({
     fontSize: fontSize.xs,
     display: "flex",
     alignItems: "center",
-    fontFamily: "Lato, sans-serif",
+    fontFamily: "Helvetica Neue, sans-serif",
   },
   tip: {
     color: "#ffefd4",
@@ -55,7 +55,7 @@ theme.overrides = {
   },
   MuiTab: {
     root: {
-      fontFamily: "Lato, sans-serif",
+      fontFamily: "Helvetica Neue, sans-serif",
       color: "#282525",
       backgroundColor: "#FCFCFD",
       fontWeight: 300,
@@ -150,7 +150,7 @@ theme.overrides = {
       fontWeight: "700",
     },
     label: {
-      fontFamily: "Lato, sans-serif",
+      fontFamily: "Helvetica Neue, sans-serif",
       lineHeight: "15px",
       boxShadow: "none",
     },
@@ -160,7 +160,7 @@ theme.overrides = {
       "&:hover": {
         backgroundColor: "#EFF2F7",
       },
-      fontFamily: "Lato, sans-serif",
+      fontFamily: "Helvetica Neue, sans-serif",
       color: "#36425A",
       fontSize: "16px",
       lineHeight: "15px",
