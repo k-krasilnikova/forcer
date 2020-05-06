@@ -4,7 +4,7 @@ import { reducer as formReducer } from "redux-form";
 import { persistCombineReducers, createTransform } from "redux-persist";
 
 import { apiCalls } from "api/reducers";
-// import auth from './modules/auth/reducers';
+import auth from "modules/auth/reducers";
 
 const authTransform = createTransform((state) => state, {
   whitelist: ["auth"],
@@ -22,7 +22,7 @@ const reducer = (history) =>
     form: formReducer,
     apiCalls,
     router: connectRouter(history),
-    // auth,
+    auth,
   });
 
 export default reducer;

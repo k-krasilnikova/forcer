@@ -5,12 +5,12 @@ import {
   delay,
   // select
 } from "redux-saga/effects";
-// import camelCase from 'lodash/camelCase';
+import camelCase from "lodash/camelCase";
 
 import { apiCallCounterDec, apiCallCounterInc } from "../actions";
 // import { logout } from 'modules/auth/actions';
 import * as calls from "../calls";
-import { setAuth } from "api";
+// import { setAuth } from "api";
 // import { getToken, getIsAuthenticated } from 'modules/auth/selectors';
 
 const successPostfix = "_SUCCESS";
@@ -40,7 +40,7 @@ function createSuccessAction(action, response) {
   };
 }
 
-function* checkStatus(status) {
+function checkStatus(status) {
   switch (status) {
     case 400:
       //yield put(push(Routes.BAD_REQUEST));
@@ -65,12 +65,7 @@ function* checkStatus(status) {
 
 function* sendRequest(action) {
   yield put(apiCallCounterInc(action.type));
-  let callMethod =
-    calls[
-      // camelCase(
-      action.type
-      // )
-    ];
+  let callMethod = calls[camelCase(action.type)];
   if (!callMethod) {
     throw new Error(`no api method for action ${action.type}`);
   }
@@ -86,7 +81,7 @@ function* sendRequest(action) {
     yield put(createSuccessAction(action, response));
   } catch (error) {
     if (error.status) {
-      yield* checkStatus(error.status);
+      yield checkStatus(error.status);
     }
     yield put(createFailAction(action, error));
   }

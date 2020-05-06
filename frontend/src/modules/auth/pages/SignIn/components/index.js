@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Field, reduxForm } from "redux-form";
 import { compose } from "redux";
 import { withStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import Button from "common/Button";
 
 import Layout from "common/Layout";
 import TextInput from "common/TextInput";
@@ -37,7 +37,12 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
             validate={[required]}
             isConfidential
           />
-          <Button fullWidth color="primary" size="large" type="submit">
+          <Button
+            color="primary"
+            size="large"
+            type="submit"
+            isPending={isPending}
+          >
             Sign In
           </Button>
         </section>
