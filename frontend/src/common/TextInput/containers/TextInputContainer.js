@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
 
-import TextInput from '../components/TextInput';
+import TextInput from "../components/TextInput";
 
 class TextInputContainer extends PureComponent {
   constructor(props) {
@@ -25,7 +25,7 @@ class TextInputContainer extends PureComponent {
     const { isConfidential } = this.props;
     if (isConfidential && event.getModifierState) {
       this.setState({
-        isTooltipShown: event.getModifierState('CapsLock'),
+        isTooltipShown: event.getModifierState("CapsLock"),
       });
     }
   };
@@ -47,6 +47,7 @@ class TextInputContainer extends PureComponent {
       <TextInput
         isShowPassword={this.state.isShowPassword}
         onChangeVisibility={this.onChangeVisibility}
+        tooltip="lalalal"
         {...props}
         {...this.props}
       />

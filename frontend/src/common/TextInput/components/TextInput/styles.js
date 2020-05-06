@@ -74,7 +74,7 @@ const styles = (theme) => ({
     },
   },
   iconButton: {
-    color: "#95E2D2",
+    color: "#ffefd4",
     fontSize: 22,
     width: 36,
     height: 36,
@@ -91,7 +91,6 @@ const styles = (theme) => ({
   },
   tip: {
     ...theme.tip,
-    //bottom: 0,
   },
   optionalText: {
     color: "#CCD2DE",
@@ -105,7 +104,7 @@ const styles = (theme) => ({
     opacity: 1,
   },
   tooltipPopper: {
-    left: "-105px !important",
+    left: "-60px !important",
     [theme.breakpoints.down(480)]: {
       left: "-20px !important",
     },
@@ -114,7 +113,7 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    color: "#36425A",
+    color: "#3f3e39",
     fontSize: "12px",
     fontWeight: 300,
     letterSpacing: "0.05px",
@@ -123,7 +122,7 @@ const styles = (theme) => ({
   tooltipIcon: {
     fontSize: "14px",
     marginRight: "4px",
-    color: "#2727C5",
+    color: "#969082",
   },
   tooltipPlacementBottom: {
     margin: "-18px 0",

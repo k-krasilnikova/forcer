@@ -32,6 +32,7 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
             placeholder="Password"
             component={TextInput}
             className={classes.field}
+            isConfidential
           />
           <Button fullWidth color="primary" size="large" type="submit">
             Sign In

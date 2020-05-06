@@ -18,6 +18,7 @@ const styles = () => ({
   },
   field: {
     paddingBottom: 10,
+    width: 220,
   },
 });
 
