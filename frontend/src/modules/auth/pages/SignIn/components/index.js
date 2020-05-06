@@ -8,6 +8,7 @@ import Button from "@material-ui/core/Button";
 import Layout from "common/Layout";
 import TextInput from "common/TextInput";
 import Logo from "static/Logo-black-web.png";
+import { email, required } from "utils/validation";
 import styles from "./styles";
 
 const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
@@ -25,6 +26,7 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
             type="text"
             component={TextInput}
             className={classes.field}
+            validate={[required, email]}
           />
           <Field
             name="password"
@@ -32,6 +34,7 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
             placeholder="Password"
             component={TextInput}
             className={classes.field}
+            validate={[required]}
             isConfidential
           />
           <Button fullWidth color="primary" size="large" type="submit">

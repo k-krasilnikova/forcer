@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const palette = {
-  error: { main: "#AA5072" },
+  error: { main: "#eae7e2" },
 };
 
 const fontSize = {

@@ -42,10 +42,10 @@ const styles = (theme) => ({
   },
   purpleBorder: {
     "&$textFieldFocused:not($textFieldError) $notchedOutline": {
-      borderColor: "#7777C1 !important",
+      borderColor: "#ff00306b !important",
     },
     "&:hover:not($textFieldDisabled):not($textFieldError):not($textFieldFocused) $notchedOutline": {
-      borderColor: "#7777C1 !important",
+      borderColor: "#ff00306b !important",
     },
   },
   multiline: {
@@ -82,7 +82,7 @@ const styles = (theme) => ({
   },
   error: {
     ...theme.textError,
-    bottom: 0,
+    bottom: 10,
     left: 0,
     maxHeight: ERROR_MESSAGE_HEIGHT - 3,
   },
