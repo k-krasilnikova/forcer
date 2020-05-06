@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import classNames from "classnames";
 
 // import Notifications from "common/notifications";
 import Menu from "common/Menu";
@@ -20,12 +21,18 @@ const Layout = ({
     <div className={classes.root}>
       {/* <Notifications className={classes.notifications} /> */}
       {isAuthenticated && <Menu />}
-      {title && (
-        <Header title={title} className={headerClassName} warning={warning}>
-          {content}
-        </Header>
-      )}
-      <div className={classes.mainLayoutContent}>{children}</div>
+      <div
+        className={classNames([classes.content], {
+          [classes.contentWithMenu]: isAuthenticated,
+        })}
+      >
+        {title && (
+          <Header title={title} className={headerClassName} warning={warning}>
+            {content}
+          </Header>
+        )}
+        <div className={classes.mainLayoutContent}>{children}</div>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 const styles = () => ({
   section: {
-    height: "inherit",
+    height: "100vh",
     justifyContent: "center",
     alignItems: "center",
     display: "flex",

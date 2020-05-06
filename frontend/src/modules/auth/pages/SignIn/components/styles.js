@@ -3,7 +3,7 @@ const styles = () => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    height: "inherit",
+    height: "100vh",
   },
   form: {
     display: "flex",

@@ -44,8 +44,7 @@ const styles = () => ({
     marginRight: "6px",
   },
   icon: {
-    width: 20,
-    height: 20,
+    width: 26,
   },
   textContainer: {
     paddingLeft: "7px",
