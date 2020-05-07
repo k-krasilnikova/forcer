@@ -9,7 +9,8 @@ const styles = () => ({
   wrapperNews: {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "#ffffff63",
+    alignItems: "center",
+    backgroundColor: "#9a92878a",
     border: "1px solid #ffffff17",
     borderRadius: 20,
     boxShadow: "0 10px 20px 0 rgb(0, 0, 0)",
@@ -20,7 +21,7 @@ const styles = () => ({
   wrapperDashboard: {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "#ffffff63",
+    backgroundColor: "#9a92878a",
     border: "1px solid #ffffff17",
     borderRadius: 20,
     boxShadow: "0 10px 20px 0 rgb(0, 0, 0)",
@@ -35,9 +36,31 @@ const styles = () => ({
   },
   button: {
     marginBottom: 20,
-    // background:
-    //   "linear-gradient(113.45deg, #000000 0%, #0000008c 51%, #00000082 100%)",
-    // color: "#ffefd4",
+  },
+  tags: {
+    display: "flex",
+    width: "100%",
+    "&>div": {
+      marginRight: 10,
+      color: " #ffefd4d9",
+      minWidth: 100,
+      letterSpacing: 1,
+      textTransform: " uppercase",
+      background:
+        "linear-gradient(113.45deg, #00000070 0%, #0000008c 51%, #00000012 100%)",
+    },
+  },
+  title: {
+    color: "#faf9f9",
+    fontSize: 24,
+    fontWeight: 400,
+  },
+  description: {
+    color: "#dfd2bb",
+    paddingBottom: 20,
+  },
+  descriptionImage: {
+    maxWidth: 500,
   },
 });
 

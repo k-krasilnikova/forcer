@@ -1,9 +1,11 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import Chip from "@material-ui/core/Chip";
 
 import Button from "common/Button";
 import Layout from "common/Layout";
+import { TAG_TYPES } from "../../../constants";
 import styles from "./styles";
 
 const Feed = ({ classes, allNews }) => {
@@ -13,9 +15,23 @@ const Feed = ({ classes, allNews }) => {
         <div className={classes.allNews}>
           {allNews.map((news) => (
             <div className={classes.wrapperNews} key={news._id}>
-              <h4>{news.title}</h4>
-              <div>{news.description}</div>
-              <img src={news.image_url} alt="News Description" />
+              <div className={classes.tags}>
+                {news.tags &&
+                  news.tags.map((tag) => (
+                    <Chip
+                      label={TAG_TYPES[tag].label}
+                      variant="outlined"
+                      key={tag}
+                    />
+                  ))}
+              </div>
+              <h3 className={classes.title}>{news.title}</h3>
+              <div className={classes.description}>{news.description}</div>
+              <img
+                src={news.image_url}
+                alt="News Description"
+                className={classes.descriptionImage}
+              />
             </div>
           ))}
         </div>

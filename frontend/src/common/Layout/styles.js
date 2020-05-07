@@ -2,12 +2,16 @@ import Background from "static/BG-comp.png";
 
 const styles = () => ({
   root: {
-    backgroundImage: `url(${Background})`,
+    // backgroundImage: `url(${Background})`,
     display: "flex",
     minHeight: "100vh",
+    // backgroundSize: "cover",
+    // backgroundRepeat: "no-repeat",
+    // backgroundPosition: "center",
+    background: `url(${Background}) no-repeat center center fixed`,
     backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
+    height: "100%",
+    overflow: "hidden",
   },
   content: {
     width: "100%",
