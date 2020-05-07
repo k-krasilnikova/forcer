@@ -13,6 +13,7 @@ const styles = () => ({
     backgroundColor: "#ffffff33",
     border: "1px solid #ffffff17",
     borderRadius: 20,
+    boxShadow: "0 10px 20px 0 rgb(0, 0, 0)",
     padding: 50,
   },
   logo: {

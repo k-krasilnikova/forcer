@@ -17,6 +17,7 @@ const styles = () => ({
   },
   menuListItemSelected: {
     backgroundColor: "#333232 !important",
+    boxShadow: "10px 10px 10px 10px rgba(55, 55, 55, 0.37)",
     "& $menuListItemText": {
       fontWeight: "bold",
       color: "#eae7e2",

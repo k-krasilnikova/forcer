@@ -8,7 +8,7 @@ import Maps from "modules/maps";
 import Clients from "modules/clients";
 import Feed from "modules/feed";
 import Statistics from "modules/statistics";
-// import Home from "modules/home";
+import Home from "modules/home";
 import NotFoundPage from "common/NotFoundPage";
 
 const AppRoutes = () => {
@@ -21,7 +21,7 @@ const AppRoutes = () => {
         <Route path={ROUTES.CLIENTS} component={Clients} />
         <Route path={ROUTES.FEED} component={Feed} />
         <Route path={ROUTES.STATISTICS} component={Statistics} />
-        {/* <Route path={ROUTES.HOME} component={Home} /> */}
+        <Route path={ROUTES.HOME} component={Home} />
         <Route component={NotFoundPage} />
       </Switch>
     </Suspense>

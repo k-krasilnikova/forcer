@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Field, reduxForm } from "redux-form";
 import { compose } from "redux";
 import { withStyles } from "@material-ui/core/styles";
-import Button from "common/Button";
 
+import Button from "common/Button";
 import Layout from "common/Layout";
 import TextInput from "common/TextInput";
 import Logo from "static/Logo-black-web.png";

@@ -17,7 +17,7 @@ const theme = createMuiTheme({
       main: "#ffefd4",
     },
     secondary: {
-      main: "#2727C5",
+      main: "#fff",
     },
     ...palette,
   },
@@ -113,13 +113,12 @@ theme.overrides = {
       },
     },
     containedSecondary: {
-      color: "white",
       fontWeight: 700,
       backgroundSize: "200% auto",
       transition: "0.5s",
-      backgroundColor: "#ffffff",
       background:
-        "linear-gradient(116.57deg, #7ADEC9 0%, #5BB0CE 51%, #7ADEC9 100%)",
+        "linear-gradient(113.45deg, #000000 0%, #0000008c 51%, #00000082 100%)",
+      color: "#ffefd4",
       "&:hover": {
         backgroundPosition: "right center",
       },
