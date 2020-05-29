@@ -123,7 +123,7 @@ theme.overrides = {
         backgroundPosition: "right center",
       },
       "&:active": {
-        background: "linear-gradient(116.57deg, #5AB6C6 0%, #5BB0CE 100%)",
+        background: "linear-gradient(116.57deg, rgb(178, 167, 148) 0%, #aaa 100%);",
       },
     },
     disabled: {

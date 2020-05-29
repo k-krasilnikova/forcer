@@ -16,7 +16,7 @@ const styles = () => ({
     boxShadow: "0 10px 20px 0 rgb(0, 0, 0)",
     padding: 50,
     marginBottom: 20,
-    width: 840,
+    width: 940,
   },
   wrapperDashboard: {
     display: "flex",
@@ -32,7 +32,7 @@ const styles = () => ({
   },
   dashboard: {
     width: 240,
-    marginLeft: 80,
+    marginLeft: 40,
   },
   button: {
     marginBottom: 20,
@@ -57,7 +57,7 @@ const styles = () => ({
   },
   description: {
     color: "#dfd2bb",
-    paddingBottom: 20,
+    paddingBottom: 40,
   },
   descriptionImage: {
     maxWidth: 500,
