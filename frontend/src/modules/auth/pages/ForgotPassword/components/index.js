@@ -65,7 +65,7 @@ const ForgotPassword = ({ classes, handleSubmit, error, isPending }) => {
 ForgotPassword.propTypes = {
   isPending: PropTypes.bool,
   handleSubmit: PropTypes.func.isRequired,
-  error: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
 };
 
 export default compose(reduxForm(), withStyles(styles))(ForgotPassword);

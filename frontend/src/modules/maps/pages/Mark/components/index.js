@@ -6,12 +6,12 @@ import styles from "./styles";
 
 const Mark = ({ classes, mark = {} }) => {
   return (
-      <div className={classes.mark}>
-          <p>{mark.title || 'lol'}</p>
-          <p>{mark.description}</p>
-          <p>{MARK_TYPES[mark.priority] && MARK_TYPES[mark.priority].label}</p>
-          <p>{mark.createdAt}</p>
-      </div>
+    <div className={classes.mark}>
+      <p>{mark.title || "lol"}</p>
+      <p>{mark.description}</p>
+      <p>{MARK_TYPES[mark.priority] && MARK_TYPES[mark.priority].label}</p>
+      <p>{mark.createdAt}</p>
+    </div>
   );
 };
 

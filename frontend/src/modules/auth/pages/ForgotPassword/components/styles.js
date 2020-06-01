@@ -3,7 +3,7 @@ const styles = () => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    height: "100vh",
+    height: "100vh"
   },
   form: {
     display: "flex",
@@ -14,20 +14,20 @@ const styles = () => ({
     border: "1px solid #ffffff17",
     borderRadius: 20,
     boxShadow: "0 10px 20px 0 rgb(0, 0, 0)",
-    padding: 50,
+    padding: 50
   },
   logo: {
     width: 140,
-    paddingBottom: 30,
+    paddingBottom: 30
   },
   wrapper: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column"
   },
   field: {
     paddingBottom: 10,
-    width: 220,
-  },
+    width: 220
+  }
 });
 
 export default styles;

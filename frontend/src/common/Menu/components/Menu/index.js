@@ -34,7 +34,7 @@ const Menu = ({ classes, email, userName }) => {
 
 Menu.propTypes = {
   email: PropTypes.string,
-  userName: PropTypes.string,
+  userName: PropTypes.string
 };
 
 export default withStyles(styles)(Menu);

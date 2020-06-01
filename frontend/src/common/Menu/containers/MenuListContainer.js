@@ -25,7 +25,7 @@ const MenuListContainer = () => {
 };
 
 MenuListContainer.propTypes = {
-  isAuthenticated: PropTypes.bool,
+  isAuthenticated: PropTypes.bool
 };
 
 export default MenuListContainer;

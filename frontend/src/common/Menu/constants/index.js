@@ -9,24 +9,24 @@ export const menuItemsList = [
     id: "clients_view",
     label: "Clients View",
     icon: clientsIcon,
-    url: ROUTES.CLIENTS,
+    url: ROUTES.CLIENTS
   },
   {
     id: "feed",
     label: "Feed",
     icon: feedIcon,
-    url: ROUTES.FEED,
+    url: ROUTES.FEED
   },
   {
     id: "statistics",
     label: "Statistics",
     icon: statisticsIcon,
-    url: ROUTES.STATISTICS,
+    url: ROUTES.STATISTICS
   },
   {
     id: "maps",
     label: "Maps",
     icon: mapsIcon,
-    url: ROUTES.MAP,
-  },
+    url: ROUTES.MAP
+  }
 ];

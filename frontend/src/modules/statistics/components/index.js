@@ -2,6 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 
+import { BarChart, ProgressChart } from "common/Graphics";
 import Layout from "common/Layout";
 import Button from "common/Button";
 import styles from "./styles";
@@ -11,6 +12,8 @@ const Statistics = ({ classes }) => {
     <Layout isAuthenticated title="Statistics">
       <div className={classes.wrapper}>
         <div className={classes.statistics}>
+          <BarChart title="Count of breakdowns" />
+          <ProgressChart title="Types of breakdowns" />
         </div>
 
         <div className={classes.dashboard}>

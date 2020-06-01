@@ -30,7 +30,7 @@ Header.propTypes = {
   isPublic: PropTypes.bool,
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
-  warning: PropTypes.string,
+  warning: PropTypes.string
 };
 
 export default withStyles(styles)(Header);

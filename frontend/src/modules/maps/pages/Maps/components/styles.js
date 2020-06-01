@@ -1,6 +1,6 @@
 const styles = () => ({
   wrapper: {
-    display: "flex",
+    display: "flex"
   },
   map: {
     display: "flex",
@@ -12,10 +12,10 @@ const styles = () => ({
     boxShadow: "0 10px 20px 0 rgb(0, 0, 0)",
     padding: 50,
     marginBottom: 20,
-    width: 940,
+    width: 940
   },
   mapImage: {
-    width: '100%',
+    width: "100%"
   },
   wrapperDashboard: {
     display: "flex",
@@ -26,16 +26,16 @@ const styles = () => ({
     boxShadow: "0 10px 20px 0 rgb(0, 0, 0)",
     padding: "50px 20px",
     "& > button:last-child": {
-      marginBottom: 0,
-    },
+      marginBottom: 0
+    }
   },
   dashboard: {
     width: 240,
-    marginLeft: 40,
+    marginLeft: 40
   },
   button: {
-    marginBottom: 20,
-  },
+    marginBottom: 20
+  }
 });
 
 export default styles;

@@ -10,7 +10,7 @@ const reducer = combineReducers({
   isAuthenticated,
   user,
   token,
-  refreshToken,
+  refreshToken
   // signIn,
 });
 

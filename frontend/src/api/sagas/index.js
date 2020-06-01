@@ -2,7 +2,7 @@ import {
   call,
   put,
   takeEvery,
-  delay,
+  delay
   // select
 } from "redux-saga/effects";
 import camelCase from "lodash/camelCase";
@@ -26,7 +26,7 @@ function createFailAction(action, error) {
     type: type.replace(startPostfix, failPostfix),
     payload,
     response,
-    error,
+    error
   };
 }
 
@@ -36,7 +36,7 @@ function createSuccessAction(action, response) {
   return {
     type: type.replace(startPostfix, successPostfix),
     payload,
-    response,
+    response
   };
 }
 
@@ -96,11 +96,11 @@ function* requestEnded(action) {
   yield put(apiCallCounterDec(type));
 }
 
-let isApiCallAction = (action) => {
+let isApiCallAction = action => {
   return action.type.endsWith(startPostfix);
 };
 
-let isApiCallEndedAction = (action) => {
+let isApiCallEndedAction = action => {
   return (
     action.type.endsWith(successPostfix) || action.type.endsWith(failPostfix)
   );

@@ -7,25 +7,25 @@ const styles = () => ({
     overflowY: "auto",
     flex: 1,
     height: "100vh",
-    boxSizing: "border-box",
+    boxSizing: "border-box"
   },
   infoContainer: {
-    paddingTop: "20px",
+    paddingTop: "20px"
   },
   logoContainer: {
-    paddingLeft: "16px",
+    paddingLeft: "16px"
   },
   logo: {
-    width: 150,
+    width: 150
   },
   userContainer: {
     paddingLeft: 12,
-    marginTop: 60,
+    marginTop: 60
   },
   menuContainer: {
     flex: 1,
-    marginTop: 20,
-  },
+    marginTop: 20
+  }
 });
 
 export default styles;

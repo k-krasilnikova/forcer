@@ -17,14 +17,14 @@ const MenuContainer = () => {
 
   const props = {
     email: "lol@gmail.com",
-    userName: "Main Admin",
+    userName: "Main Admin"
   };
   return <Menu {...props} />;
 };
 
 MenuContainer.propTypes = {
   email: PropTypes.string,
-  userName: PropTypes.string,
+  userName: PropTypes.string
 };
 
 export default MenuContainer;

@@ -2,15 +2,15 @@ export const FEED_FORM = "FEED_FORM";
 
 export const TAG_TYPES = {
   auto: {
-    label: "Auto",
+    label: "Auto"
   },
   minsk: {
-    label: "Minsk",
+    label: "Minsk"
   },
   app: {
-    label: "Application",
+    label: "Application"
   },
   discounts: {
-    label: "Discounts",
-  },
+    label: "Discounts"
+  }
 };

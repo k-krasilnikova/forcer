@@ -13,7 +13,7 @@ const ForgotPasswordContainer = () => {
   );
 
   const handleSubmit = useCallback(
-    (data) => {
+    data => {
       dispatch(forgotPasswordRequest(data));
     },
     [dispatch]

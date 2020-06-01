@@ -8,7 +8,7 @@ class TextInputContainer extends PureComponent {
     super(props);
     this.state = {
       isShowPassword: false,
-      isTooltipShown: false,
+      isTooltipShown: false
     };
   }
 
@@ -18,14 +18,14 @@ class TextInputContainer extends PureComponent {
     }
   }
 
-  checkCapsLock = (event) => {
+  checkCapsLock = event => {
     if (!event) {
       return;
     }
     const { isConfidential } = this.props;
     if (isConfidential && event.getModifierState) {
       this.setState({
-        isTooltipShown: event.getModifierState("CapsLock"),
+        isTooltipShown: event.getModifierState("CapsLock")
       });
     }
   };
@@ -40,7 +40,7 @@ class TextInputContainer extends PureComponent {
     const { isConfidential } = this.props;
     const props = {
       isTooltipShown: this.state.isTooltipShown,
-      checkCapsLock: this.checkCapsLock,
+      checkCapsLock: this.checkCapsLock
     };
 
     return isConfidential ? (
@@ -58,11 +58,11 @@ class TextInputContainer extends PureComponent {
 }
 
 TextInputContainer.propTypes = {
-  isConfidential: PropTypes.bool,
+  isConfidential: PropTypes.bool
 };
 
 TextInputContainer.defaultProps = {
-  isConfidential: false,
+  isConfidential: false
 };
 
 export default TextInputContainer;

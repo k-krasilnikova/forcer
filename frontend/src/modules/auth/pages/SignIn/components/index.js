@@ -56,7 +56,7 @@ const SignInForm = ({ classes, handleSubmit, error, isPending }) => {
 SignInForm.propTypes = {
   isPending: PropTypes.bool,
   handleSubmit: PropTypes.func.isRequired,
-  error: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
 };
 
 export default compose(reduxForm(), withStyles(styles))(SignInForm);

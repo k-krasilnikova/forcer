@@ -1,7 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Avatar from '@material-ui/core/Avatar';
+import Avatar from "@material-ui/core/Avatar";
 
 import Layout from "common/Layout";
 import Button from "common/Button";
@@ -10,22 +10,22 @@ import styles from "./styles";
 
 const Clients = ({ classes }) => {
   const allClients = [
-    {_id: 1, name: "Kate Krasilnikova", marks: 7, },
-    {_id: 2, name: "Vlad Vadimov", marks: 1, },
-    {_id: 3, name: "Denis Markov", marks: 14, },
-    {_id: 4, name: "Ann Kondratsieva", marks: 3, }
+    { _id: 1, name: "Kate Krasilnikova", marks: 7 },
+    { _id: 2, name: "Vlad Vadimov", marks: 1 },
+    { _id: 3, name: "Denis Rutkovskiy", marks: 14 },
+    { _id: 4, name: "Ann Kondratsieva", marks: 3 }
   ];
   return (
     <Layout isAuthenticated title="Clients View">
       <div className={classes.wrapper}>
         <div className={classes.clients}>
-        <div className={classes.clientHeader}>
-          <p>Avatar</p>
-          <p className={classes.headerName}>Name</p>
-          <p>Registered marks</p>
-          <p className={classes.headerMore}>More</p>
-        </div>
-        {allClients.map((client) => (
+          <div className={classes.clientHeader}>
+            <p>Avatar</p>
+            <p className={classes.headerName}>Name</p>
+            <p>Registered marks</p>
+            <p className={classes.headerMore}>More</p>
+          </div>
+          {allClients.map(client => (
             <div key={client._id} className={classes.clientRow}>
               <Avatar alt="Remy Sharp" src={client.avatar || defaultAvatar} />
               <h3 className={classes.name}>{client.name}</h3>

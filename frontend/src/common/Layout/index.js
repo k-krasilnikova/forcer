@@ -15,7 +15,7 @@ const Layout = ({
   title,
   warning,
   content,
-  headerClassName,
+  headerClassName
 }) => {
   return (
     <div className={classes.root}>
@@ -23,7 +23,7 @@ const Layout = ({
       {isAuthenticated && <Menu />}
       <div
         className={classNames([classes.content], {
-          [classes.contentWithMenu]: isAuthenticated,
+          [classes.contentWithMenu]: isAuthenticated
         })}
       >
         {title && (
@@ -42,7 +42,7 @@ Layout.propTypes = {
   content: PropTypes.object,
   title: PropTypes.string,
   warning: PropTypes.string,
-  headerClassName: PropTypes.string,
+  headerClassName: PropTypes.string
 };
 
 export default withStyles(styles)(Layout);

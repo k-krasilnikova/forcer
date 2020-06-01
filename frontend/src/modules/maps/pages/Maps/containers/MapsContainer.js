@@ -1,8 +1,7 @@
-import React from // , { useCallback }
-"react";
+import React from "react"; // , { useCallback }
 import {
   // useDispatch,
-  useSelector,
+  useSelector
 } from "react-redux";
 
 import Maps from "../components";

@@ -13,7 +13,7 @@ const ClientsContainer = () => {
   );
 
   const handleSubmit = useCallback(
-    (data) => {
+    data => {
       dispatch(getClientsRequest(data));
     },
     [dispatch]

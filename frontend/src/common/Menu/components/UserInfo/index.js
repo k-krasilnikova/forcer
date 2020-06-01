@@ -34,7 +34,7 @@ const UserInfo = ({ classes, userEmail, userName }) => {
 
 UserInfo.propTypes = {
   userEmail: PropTypes.string.isRequired,
-  userName: PropTypes.string,
+  userName: PropTypes.string
 };
 
 export default withStyles(styles)(UserInfo);

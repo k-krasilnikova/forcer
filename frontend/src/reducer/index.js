@@ -6,23 +6,23 @@ import { persistCombineReducers, createTransform } from "redux-persist";
 import { apiCalls } from "api/reducers";
 import auth from "modules/auth/reducers";
 
-const authTransform = createTransform((state) => state, {
-  whitelist: ["auth"],
+const authTransform = createTransform(state => state, {
+  whitelist: ["auth"]
 });
 
 const rootPersistConfig = {
   key: "authData",
   storage: storage,
   whitelist: ["auth"],
-  transforms: [authTransform],
+  transforms: [authTransform]
 };
 
-const reducer = (history) =>
+const reducer = history =>
   persistCombineReducers(rootPersistConfig, {
     form: formReducer,
     apiCalls,
     router: connectRouter(history),
-    auth,
+    auth
   });
 
 export default reducer;

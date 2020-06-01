@@ -5,18 +5,18 @@ const styles = () => ({
     alignItems: "center",
     display: "flex",
     "@media (max-width:600px)": {
-      flexDirection: "column-reverse",
-    },
+      flexDirection: "column-reverse"
+    }
   },
   image: {
     width: 200,
-    margin: 20,
+    margin: 20
   },
   contentContainer: {
     display: " flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "center"
   },
   title: {
     color: "#ffefd4",
@@ -24,8 +24,8 @@ const styles = () => ({
     fontWeight: 300,
     margin: 0,
     "@media (max-width:600px)": {
-      fontSize: 50,
-    },
+      fontSize: 50
+    }
   },
   description: {
     color: "#ffefd4",
@@ -34,9 +34,9 @@ const styles = () => ({
     marginBottom: 20,
     maxWidth: 390,
     "@media (max-width:640px)": {
-      fontSize: 18,
-    },
-  },
+      fontSize: 18
+    }
+  }
 });
 
 export default styles;

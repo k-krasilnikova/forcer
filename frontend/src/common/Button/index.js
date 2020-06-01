@@ -29,7 +29,7 @@ const ButtonComponent = ({
           className={classNames({
             [classes.loader]: true,
             [classes.hidden]: true,
-            [classes.visible]: isPending,
+            [classes.visible]: isPending
           })}
         >
           <img alt="" src={loader_squares} />
@@ -37,7 +37,7 @@ const ButtonComponent = ({
         <div
           className={classNames({
             [classes.buttonTextContainer]: true,
-            [classes.hidden]: isPending,
+            [classes.hidden]: isPending
           })}
         >
           {children}
@@ -51,7 +51,7 @@ ButtonComponent.propTypes = {
   // children: PropTypes.object,
   onClick: PropTypes.func,
   className: PropTypes.string,
-  data: PropTypes.object,
+  data: PropTypes.object
 };
 
 export default withStyles(styles)(ButtonComponent);

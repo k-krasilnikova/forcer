@@ -19,9 +19,9 @@ let config = {
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
-    Pragma: "no-cache",
+    Pragma: "no-cache"
   },
-  params: {},
+  params: {}
 };
 
 const api = axios.create(config);
@@ -53,8 +53,8 @@ function getAuthToken() {
 // }
 
 api.interceptors.response.use(
-  (result) => result,
-  (err) => {
+  result => result,
+  err => {
     const error = err.response;
     if (store.getState().auth.refreshToken) {
       if (
@@ -63,7 +63,7 @@ api.interceptors.response.use(
         !error.config.__isRetryRequest
       ) {
         return getAuthToken()
-          .then((response) => {
+          .then(response => {
             // store.dispatch(refreshToken(response.data.token));
             error.config.headers["Authorization"] =
               "Bearer " + response.data.token;

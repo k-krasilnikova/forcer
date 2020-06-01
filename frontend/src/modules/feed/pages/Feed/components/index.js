@@ -13,11 +13,11 @@ const Feed = ({ classes, allNews }) => {
     <Layout isAuthenticated title="Feed">
       <div className={classes.container}>
         <div className={classes.allNews}>
-          {allNews.map((news) => (
+          {allNews.map(news => (
             <div className={classes.wrapperNews} key={news._id}>
               <div className={classes.tags}>
                 {news.tags &&
-                  news.tags.map((tag) => (
+                  news.tags.map(tag => (
                     <Chip
                       label={TAG_TYPES[tag].label}
                       variant="outlined"

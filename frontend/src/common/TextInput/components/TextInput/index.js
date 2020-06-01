@@ -36,7 +36,7 @@ const TextInput = ({
   ...others
 }) => {
   const inputStyle = classNames([classes.input, inputClassName], {
-    [classes.privateInput]: !isShowPassword,
+    [classes.privateInput]: !isShowPassword
   });
   const textFieldContainerStyle = classNames(
     classes.textFieldContainer,
@@ -57,12 +57,12 @@ const TextInput = ({
       classes={{
         tooltip: classes.tooltip,
         popper: classes.tooltipPopper,
-        tooltipPlacementBottom: classes.tooltipPlacementBottom,
+        tooltipPlacementBottom: classes.tooltipPlacementBottom
       }}
     >
       <FormControl
         className={classNames(classes.wrapper, wrapperClassName, {
-          [classes.wrapperTwoMessageLines]: twoErrorMessageLines,
+          [classes.wrapperTwoMessageLines]: twoErrorMessageLines
         })}
       >
         <TextField
@@ -86,19 +86,19 @@ const TextInput = ({
             classes: {
               root: classes.label,
               focused: classes.labelFocused,
-              error: classes.labelError,
-            },
+              error: classes.labelError
+            }
           }}
           InputProps={{
             classes: {
               root: classNames(classes.textField, {
-                [classes[`${borderColor}Border`]]: borderColor,
+                [classes[`${borderColor}Border`]]: borderColor
               }),
               focused: classes.textFieldFocused,
               notchedOutline: classes.notchedOutline,
               multiline: classes.multiline,
               error: classes.textFieldError,
-              input: inputStyle,
+              input: inputStyle
             },
             endAdornment:
               endAdornment ||
@@ -116,12 +116,12 @@ const TextInput = ({
                     {isShowPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
                 </InputAdornment>
-              )),
+              ))
           }}
           {...others}
           onKeyUp={checkCapsLock}
           onKeyDown={checkCapsLock}
-          onChange={(event) => {
+          onChange={event => {
             input.onChange(event);
             setTimeout(() => checkCapsLock(event), 1);
           }}
@@ -143,11 +143,11 @@ const TextInput = ({
 TextInput.propTypes = {
   label: PropTypes.string,
   input: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
   }).isRequired,
   meta: PropTypes.shape({
     error: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    submitFailed: PropTypes.bool.isRequired,
+    submitFailed: PropTypes.bool.isRequired
   }).isRequired,
   twoErrorMessageLines: PropTypes.bool,
   isConfidential: PropTypes.bool.isRequired,
@@ -161,7 +161,7 @@ TextInput.propTypes = {
   inputClassName: PropTypes.string,
   isTooltipShown: PropTypes.bool.isRequired,
   focused: PropTypes.bool,
-  checkCapsLock: PropTypes.func,
+  checkCapsLock: PropTypes.func
 };
 
 export default withStyles(styles)(TextInput);

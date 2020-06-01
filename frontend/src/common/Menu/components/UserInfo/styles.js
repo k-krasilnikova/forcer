@@ -1,9 +1,9 @@
 const styles = () => ({
   container: {
-    flex: 1,
+    flex: 1
   },
   avatar: {
-    width: 50,
+    width: 50
   },
   userDataText: {
     color: "#ffefd4",
@@ -11,15 +11,15 @@ const styles = () => ({
     fontFamily: "Helvetica Neue, sans-serif",
     fontWeight: 700,
     lineHeight: "19px",
-    marginBottom: 3,
+    marginBottom: 3
   },
   userInfoContainer: {
     paddingLeft: 10,
     maxWidth: "160px",
     height: "100%",
     flex: 1,
-    whiteSpace: "nowrap",
-  },
+    whiteSpace: "nowrap"
+  }
 });
 
 export default styles;

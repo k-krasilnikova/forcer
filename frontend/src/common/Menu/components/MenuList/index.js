@@ -50,7 +50,7 @@ const MenuList = ({ classes, selectedRoute, onMenuClick, menuItemsList }) => {
 MenuList.propTypes = {
   selectedRoute: PropTypes.string.isRequired,
   onMenuClick: PropTypes.func.isRequired,
-  menuItemsList: PropTypes.array.isRequired,
+  menuItemsList: PropTypes.array.isRequired
 };
 
 export default withStyles(styles)(MenuList);

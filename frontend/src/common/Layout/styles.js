@@ -11,19 +11,19 @@ const styles = () => ({
     background: `url(${Background}) no-repeat center center fixed`,
     backgroundSize: "cover",
     height: "100%",
-    overflow: "hidden",
+    overflow: "hidden"
   },
   content: {
-    width: "100%",
+    width: "100%"
   },
   contentWithMenu: {
     width: "calc(100vw - 240px)",
     marginLeft: 240,
-    marginRight: 20,
+    marginRight: 20
   },
   mainLayoutContent: {
-    width: "100%",
-  },
+    width: "100%"
+  }
 });
 
 export default styles;
