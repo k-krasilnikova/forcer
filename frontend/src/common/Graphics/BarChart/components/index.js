@@ -24,6 +24,7 @@ const BarChart = ({ classes, title = "" }) => {
               axis: {
                 stroke: "#eae7e2",
               },
+              tickLabels: { fill: "#eae7e2" },
             }}
           />
           <VictoryAxis
@@ -33,6 +34,7 @@ const BarChart = ({ classes, title = "" }) => {
               axis: {
                 stroke: "#eae7e2",
               },
+              tickLabels: { fill: "#eae7e2" },
             }}
           />
           <VictoryBar

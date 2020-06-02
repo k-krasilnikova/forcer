@@ -1,50 +1,38 @@
 import React from "react";
 // import PropTypes from "prop-types";
-import {
-  VictoryChart,
-  VictoryStack,
-  VictoryBar,
-  VictoryAxis,
-  VictoryLabel,
-} from "victory";
+import LinearProgress from "@material-ui/core/LinearProgress";
 import { withStyles } from "@material-ui/core/styles";
 
 import styles from "./styles";
 
 const ProgressChart = ({ classes, title }) => {
-  const data = [
-    { x: "Accumulator", y: 56 },
-    { x: "Wheel problems", y: 28 },
-    { x: "Inspection", y: 16 },
+  const breakdowns = [
+    { label: "Accumulator", value: 56 },
+    { label: "Wheel problems", value: 28 },
+    { label: "Inspection", value: 4 },
+    { label: "Petrol need", value: 9 },
+    { label: "Other", value: 3 },
   ];
   return (
     <div className={classes.chartWrapper}>
       <h3 className={classes.title}>{title}</h3>
       <div className={classes.chart}>
-        <VictoryChart horizontal padding={40}>
-          <VictoryStack
-            style={{
-              labels: { fontSize: 15, color: "#eae7e2" },
-            }}
-          >
-            <VictoryBar
-              style={{
-                data: { fill: "orange" },
-                labels: { fontSize: 15, color: "#eae7e2" },
+        {breakdowns.map((breakdown) => (
+          <div>
+            <div className={classes.breakdown}>
+              <p>{breakdown.label}</p>
+              <p>{breakdown.value} %</p>
+            </div>
+            <LinearProgress
+              value={breakdown.value}
+              variant="determinate"
+              classes={{
+                colorPrimary: classes.progressBar,
+                barColorPrimary: classes.progressBarColor,
               }}
-              data={data}
-              labels={({ datum }) => `${datum._y}%`}
             />
-          </VictoryStack>
-          <VictoryAxis
-            style={{
-              axis: { stroke: "transparent" },
-              ticks: { stroke: "transparent" },
-              tickLabels: { fontSize: 15, fill: "#eae7e2" },
-            }}
-            tickLabelComponent={<VictoryLabel textAnchor="middle" />}
-          />
-        </VictoryChart>
+          </div>
+        ))}
       </div>
     </div>
   );
