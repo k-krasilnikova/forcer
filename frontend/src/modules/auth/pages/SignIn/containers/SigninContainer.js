@@ -11,7 +11,7 @@ const SignInContainer = () => {
   const isSigninPending = useSelector(createPendingSelector(signinRequest));
 
   const handleSubmit = useCallback(
-    data => {
+    (data) => {
       dispatch(signinRequest(data));
     },
     [dispatch]

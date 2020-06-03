@@ -8,7 +8,7 @@ export default handleActions(
   {
     [combineActions(signInActionCreators.signinSuccess)](state, action) {
       return action.response.data.user;
-    }
+    },
   },
   defaultState
 );
