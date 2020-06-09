@@ -7,17 +7,19 @@ import Button from "common/Button";
 import Layout from "common/Layout";
 import { TAG_TYPES } from "../../../constants";
 import styles from "./styles";
+import AddNews from "../../AddNews";
 
-const Feed = ({ classes, allNews }) => {
+const Feed = ({ classes, allNews, addNews }) => {
   return (
     <Layout isAuthenticated title="Feed">
       <div className={classes.container}>
+        <AddNews addNews={addNews} />
         <div className={classes.allNews}>
-          {allNews.map(news => (
+          {allNews.map((news) => (
             <div className={classes.wrapperNews} key={news._id}>
               <div className={classes.tags}>
                 {news.tags &&
-                  news.tags.map(tag => (
+                  news.tags.map((tag) => (
                     <Chip
                       label={TAG_TYPES[tag].label}
                       variant="outlined"

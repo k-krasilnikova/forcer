@@ -10,9 +10,9 @@ import styles from "./styles";
 
 const Clients = ({ classes }) => {
   const allClients = [
-    { _id: 1, name: "Kate Krasilnikova", marks: 7 },
+    { _id: 1, name: "Kate Krasilnikova", marks: 7, avatar: "https://sun9-24.userapi.com/c845217/v845217978/ff150/4kW7aY4GZ1I.jpg" },
     { _id: 2, name: "Vlad Vadimov", marks: 1 },
-    { _id: 3, name: "Denis Rutkovskiy", marks: 14 },
+    { _id: 3, name: "Denis Rutkovskiy", marks: 14, avatar: "https://sun9-40.userapi.com/c830109/v830109612/1979fe/2jPBgSspIO8.jpg" },
     { _id: 4, name: "Ann Kondratsieva", marks: 3 }
   ];
   return (
