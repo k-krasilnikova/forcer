@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   descriptionText: {
-    color: '#fff0d3',
+    color: '#eae7e2',
   },
 });
 
