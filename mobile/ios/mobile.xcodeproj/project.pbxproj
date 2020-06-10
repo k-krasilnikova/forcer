@@ -165,6 +165,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				C73DECE7632BE92AE1DF4DD8 /* Pods */,
+				1C61099AE19C4D809DC1A6AC /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -194,9 +195,16 @@
 				8050B1C81A762EA846CF7407 /* Pods-mobile-tvOSTests.debug.xcconfig */,
 				8E90EADD025EB5E938F81032 /* Pods-mobile-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		1C61099AE19C4D809DC1A6AC /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
