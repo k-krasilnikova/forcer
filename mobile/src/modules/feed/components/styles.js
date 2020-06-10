@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     paddingTop: 20,
   },
+  feed: {
+    flex: 1,
+    flexDirection: 'column-reverse',
+  },
   image: {
     width: null,
     height: null,

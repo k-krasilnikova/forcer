@@ -33,6 +33,7 @@ const Statistics = () => {
         style={styles.statisticsWrapper}
         contentContainerStyle={{
           alignItems: 'center',
+          paddingBottom: 60,
         }}>
         <ButtonGroup
           onPress={() => {}}

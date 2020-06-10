@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   statisticsWrapper: {
     flex: 1,
     paddingTop: 20,
+    height: '100%',
   },
   image: {
     width: null,

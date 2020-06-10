@@ -39,19 +39,26 @@ const Feed = () => {
       source={BackgroundBlack}
       resizeMode="cover"
       style={styles.image}>
-      <ScrollView style={styles.feedWrapper}>
-        {allNews.map(news => (
-          <View key={news._id} style={styles.news}>
-            <Text h2 style={styles.title}>
-              {news.title}
-            </Text>
-            <Text style={styles.description}>{news.description}</Text>
-            <Image
-              source={{uri: news.image_url}}
-              style={{width: 240, height: 140}}
-            />
-          </View>
-        ))}
+      <ScrollView
+        style={styles.feedWrapper}
+        contentContainerStyle={{
+          alignItems: 'center',
+          paddingBottom: 60,
+        }}>
+        <View style={styles.feed}>
+          {allNews.map(news => (
+            <View key={news._id} style={styles.news}>
+              <Text h2 style={styles.title}>
+                {news.title}
+              </Text>
+              <Text style={styles.description}>{news.description}</Text>
+              <Image
+                source={{uri: news.image_url}}
+                style={{width: 240, height: 140}}
+              />
+            </View>
+          ))}
+        </View>
       </ScrollView>
     </ImageBackground>
   );
