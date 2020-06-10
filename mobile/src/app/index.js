@@ -6,6 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 // import {createDrawerNavigator} from '@react-navigation/drawer';
 // import {Button} from 'react-native-elements';
 
+// import Auth from '../modules/auth';
 import {TAB_NAVIGATION, TAB_ICONS, DRAWER_NAVIGATION} from '../constants';
 import {store} from '../store';
 import styles from './styles';
@@ -16,6 +17,7 @@ const Tab = createBottomTabNavigator();
 const App = () => {
   return (
     <Provider store={store} style={styles.wrapper}>
+      {/* <Auth /> */}
       <NavigationContainer>
         <Tab.Navigator
           initialRouteName={TAB_NAVIGATION[0].name}
@@ -56,7 +58,7 @@ const App = () => {
               key={tab.name}
             />
           ))}
-        </Drawer.Navigator> */}
+        </Drawer.Navigator>  */}
       </NavigationContainer>
     </Provider>
   );
