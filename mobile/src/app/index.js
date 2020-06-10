@@ -3,13 +3,16 @@ import {Provider} from 'react-redux';
 import {Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+// import {createDrawerNavigator} from '@react-navigation/drawer';
 // import {Button} from 'react-native-elements';
 
-import {TAB_NAVIGATION, TAB_ICONS} from '../constants';
+import {TAB_NAVIGATION, TAB_ICONS, DRAWER_NAVIGATION} from '../constants';
 import {store} from '../store';
 import styles from './styles';
 
 const Tab = createBottomTabNavigator();
+// const Drawer = createDrawerNavigator();
+
 const App = () => {
   return (
     <Provider store={store} style={styles.wrapper}>
@@ -45,6 +48,15 @@ const App = () => {
             />
           ))}
         </Tab.Navigator>
+        {/* <Drawer.Navigator>
+          {DRAWER_NAVIGATION.map(tab => (
+            <Tab.Screen
+              name={tab.name}
+              component={tab.component}
+              key={tab.name}
+            />
+          ))}
+        </Drawer.Navigator> */}
       </NavigationContainer>
     </Provider>
   );

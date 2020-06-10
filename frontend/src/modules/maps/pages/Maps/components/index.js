@@ -19,7 +19,7 @@ const Maps = ({ classes }) => {
       title: "Проблема с колесами",
       user: {},
       auto: {},
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     },
     {
       _id: 2,
@@ -29,7 +29,7 @@ const Maps = ({ classes }) => {
       title: "Техосмотр",
       user: {},
       auto: {},
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     },
     {
       _id: 3,
@@ -39,7 +39,7 @@ const Maps = ({ classes }) => {
       title: "Необходим эвакуатор",
       user: {},
       auto: {},
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     },
     {
       _id: 4,
@@ -49,8 +49,8 @@ const Maps = ({ classes }) => {
       title: "Аккумулятор",
       user: {},
       auto: {},
-      createdAt: new Date().toISOString()
-    }
+      createdAt: new Date().toISOString(),
+    },
   ];
   return (
     <Layout isAuthenticated title="Maps">
@@ -60,7 +60,7 @@ const Maps = ({ classes }) => {
             query={{
               ns: "use-load-option",
               load:
-                "Map,Placemark,control.ZoomControl,control.FullscreenControl,geoObject.addon.balloon"
+                "Map,Placemark,control.ZoomControl,control.FullscreenControl,geoObject.addon.balloon",
             }}
           >
             <div>
@@ -68,24 +68,24 @@ const Maps = ({ classes }) => {
                 defaultState={{
                   center: [53.9, 27.57],
                   zoom: 11,
-                  controls: ["zoomControl"]
+                  controls: ["zoomControl"],
                 }}
                 width="800px"
                 height="450px"
               >
-                {marks.map(mark => (
+                {marks.map((mark) => (
                   <Placemark
                     key={mark._id}
                     defaultGeometry={mark.coordinates}
                     properties={{
                       balloonContent: ReactDOMServer.renderToString(
                         React.createElement(() => <Mark mark={mark} />, null)
-                      )
+                      ),
                     }}
                     options={{
                       iconLayout: "default#image",
                       iconImageHref: MARK_TYPES[mark.priority].image,
-                      iconImageSize: [40, 54]
+                      iconImageSize: [40, 54],
                     }}
                   />
                 ))}

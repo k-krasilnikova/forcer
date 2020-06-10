@@ -11,6 +11,24 @@ const styles = StyleSheet.create({
     height: null,
     flex: 1,
   },
+  creation: {
+    paddingTop: 490,
+    paddingLeft: 250,
+  },
+  container: {
+    width: 55,
+    height: 55,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10000,
+    backgroundColor: '#9a92878a',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    paddingTop: 14,
+  },
+  addIcon: {
+    color: '#9a92878a',
+  },
 });
 
 export default styles;
