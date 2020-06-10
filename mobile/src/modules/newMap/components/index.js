@@ -6,7 +6,7 @@ import RNPickerSelect from 'react-native-picker-select';
 import BackgroundBlack from '../../../static/bg-black.png';
 import styles from './styles';
 
-const NewMap = () => {
+const NewMap = ({navigation}) => {
   return (
     <ImageBackground
       source={BackgroundBlack}
@@ -100,17 +100,13 @@ const NewMap = () => {
               display: 'flex',
               flexDirection: 'row',
               width: 300,
-              justifyContent: 'space-between',
+              justifyContent: 'center',
             }}>
-            <Button
-              title="Back"
-              style={styles.button}
-              buttonStyle={{backgroundColor: '#969082'}}
-            />
             <Button
               title="Publish"
               style={styles.button}
               buttonStyle={{backgroundColor: '#969082'}}
+              onPress={() => navigation.navigate('Map')}
             />
           </View>
         </View>

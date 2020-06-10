@@ -1,5 +1,10 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+# React Native Maps dependencies
+rn_maps_path = '../node_modules/react-native-maps'
+pod 'react-native-google-maps', :path => rn_maps_path
+pod 'GoogleMaps'
+pod 'Google-Maps-iOS-Utils'
 
 def add_flipper_pods!(versions = {})
   versions['Flipper'] ||= '~> 0.33.1'
@@ -78,6 +83,8 @@ target 'mobile' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
+
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
 
   target 'mobileTests' do
     inherit! :complete
