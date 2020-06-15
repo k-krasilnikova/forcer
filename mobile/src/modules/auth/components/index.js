@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, View, ImageBackground, Image} from 'react-native';
+import {Text, View, ImageBackground, Image, TextInput} from 'react-native';
 import {SocialIcon} from 'react-native-elements';
 import {Input} from 'react-native-elements';
 import {Button} from 'react-native-elements';
@@ -10,7 +10,7 @@ import Password from '../../../static/password.png';
 import BackgroundBlack from '../../../static/bg-black.png';
 import styles from './styles';
 
-const Auth = () => {
+const Auth = ({navigation}) => {
   return (
     <ImageBackground
       source={BackgroundBlack}
@@ -25,6 +25,7 @@ const Auth = () => {
             style={styles}
             onChangeText={value => console.log(value)}
             inputStyle={{color: 'white'}}
+            keyboardType={'phone-pad'}
           />
           <Input
             leftIcon={
@@ -39,6 +40,7 @@ const Auth = () => {
             title="Sign In"
             style={styles.button}
             buttonStyle={{backgroundColor: '#969082'}}
+            onPress={() => navigation.navigate('App')}
           />
         </View>
         <Text style={styles.description}>Sign in via social network</Text>

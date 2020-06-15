@@ -48,7 +48,16 @@ const Map = ({navigation}) => {
           description="Need compressor soon">
           <Image source={MarkRed} style={{height: 56, width: 40}} />
         </Marker>
-
+        <Marker
+          coordinate={{
+            latitude: 37.78599,
+            latitudeDelta: 0.004,
+            longitude: -122.4065,
+            longitudeDelta: 0.004,
+          }}
+          title="Accumulator">
+          <Image source={MarkOrange} style={{height: 56, width: 40}} />
+        </Marker>
         <Marker
           coordinate={{
             latitude: 37.781,

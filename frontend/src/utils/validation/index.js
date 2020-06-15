@@ -8,6 +8,6 @@ export const email = (value) =>
     : undefined;
 
 export const required = (value) =>
-  value.length !== 0 && (value === 0 || (value && /\w+/.test(value)))
+  value && value.length !== 0 && (value === 0 || (value && /\w+/.test(value)))
     ? undefined
     : "This field is required";
